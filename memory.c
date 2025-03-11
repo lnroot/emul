@@ -1,21 +1,32 @@
 //
-// Created by Lela on 3/10/2025.
+// Lela Root 3/10/2025 Emulator project
+// C file operating the memory device
+// memCreate(int size), memReset(), memDump(int address, int count), memSet(int address, int count, int* values), memFree()
 //
 
 #include "memory.h"
 
 #include <stdio.h>
+#include <stdlib.h>
+
+int *memptr;
+int memSize;
 
 void memCreate(int size) {
-    printf("memCreate %02X\n", size);
+    memSize = size;
+    //printf("memCreate %02X\n", size);
+    memptr = (int*)malloc(size);
 }
 
 void memReset() {
-    printf("memReset\n");
+    //printf("memReset\n");
+    memptr = (int*)calloc(memSize, memSize);
 }
 
 void memDump(int address, int count) {
-    printf("memDump %02X %02X\n", address, count);
+    for (int i = address; i < count; i++) {
+        printf("%02X\n", memptr[i]);
+    }
 }
 
 void memSet(int address, int count, int *values) {
@@ -25,4 +36,8 @@ void memSet(int address, int count, int *values) {
         printf("%02X ", values[i]);
     }
     printf("\n");
+}
+
+void memFree() {
+    free(memptr);
 }

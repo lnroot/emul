@@ -1,20 +1,25 @@
 //
-// Created by Lela on 3/10/2025.
+// Lela Root 3/10/2025 Emulator project
+// C file for clock device
+// clockReset(), clockDump(), clockTick(int inputTicks)
 //
 
 #include <stdio.h>
-//#include <stdlib.h>
 #include "clock.h"
 //#include "cpu.h"
 
+unsigned int ticks;
+
 void clockReset() {
-    printf("clockReset\n");
+    ticks = 0;
 }
 
 void clockDump() {
-    printf("clockDump\n");
+    printf("clock: %d\n", ticks);
 }
 
 void clockTick(int inputTicks) {
-    printf("clockTick %d\n", inputTicks);
+    for (int i = 0; i < inputTicks; i++) {
+        ticks++;
+    }
 }

@@ -1,3 +1,8 @@
+//
+// Lela Root 3/10/2025 Emulator project
+// C file for parsing input
+//
+
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -140,4 +145,5 @@ int main()
       }
   }
 
+  memFree();
 }

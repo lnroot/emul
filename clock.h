@@ -1,5 +1,6 @@
 //
-// Created by Lela on 3/10/2025.
+// Lela Root 3/10/2025 Emulator project
+// clockReset(), clockDump(), clockTick(int inputTicks)
 //
 
 void clockReset();

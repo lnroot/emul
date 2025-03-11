@@ -1,5 +1,7 @@
 //
-// Created by Lela on 3/10/2025.
+// Lela Root 3/10/2025 Emulator project
+// C file for the CPU device
+// cpuReset(), cpuDump(), cpuSet(char* reg, int val)
 //
 
 #include "cpu.h"
