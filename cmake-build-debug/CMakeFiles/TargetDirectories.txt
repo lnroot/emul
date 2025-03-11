@@ -1,0 +1,3 @@
+C:/Users/Lela/CLionProjects/emul/cmake-build-debug/CMakeFiles/emul.dir
+C:/Users/Lela/CLionProjects/emul/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Lela/CLionProjects/emul/cmake-build-debug/CMakeFiles/rebuild_cache.dir

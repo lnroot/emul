@@ -1,0 +1,10 @@
+# ninja log v6
+4	105	7633463665385095	CMakeFiles/untitled.dir/main.c.obj	5e8ad119aad891be
+106	575	7633463666407653	untitled.exe	26302091535fba1e
+22	256	7633573042981531	CMakeFiles/emul.dir/memory.c.obj	6b5a0022258df69f
+12	257	7633573042882186	CMakeFiles/emul.dir/cpu.c.obj	87d15e3228a99f9
+33	261	7633573043091060	CMakeFiles/emul.dir/clock.c.obj	7de6c0aca7c9465c
+3	297	7633573042745863	CMakeFiles/emul.dir/parse.c.obj	aff8fa813b2bd5fe
+297	610	7633573045736732	emul.exe	49c1ec9e875db6bd
+9	254	7633576772661234	CMakeFiles/emul.dir/parse.c.obj	aff8fa813b2bd5fe
+255	434	7633576775110890	emul.exe	49c1ec9e875db6bd
