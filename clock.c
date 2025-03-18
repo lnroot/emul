@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 #include "clock.h"
-//#include "cpu.h"
+#include "cpu.h"
 
 unsigned int ticks;
 

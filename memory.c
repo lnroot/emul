@@ -14,12 +14,10 @@ int memSize;
 
 void memCreate(int size) {
     memSize = size;
-    //printf("memCreate %02X\n", size);
     memptr = (int*)malloc(size);
 }
 
 void memReset() {
-    //printf("memReset\n");
     memptr = (int*)calloc(memSize, memSize);
 }
 

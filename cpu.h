@@ -4,6 +4,13 @@
 // cpuReset(), cpuDump(), cpuSet(char* reg, int val)
 //
 
+#include <stdint.h>
+
+struct CPU {
+    uint8_t regs[8];
+    uint8_t PC;
+};
+
 void cpuReset();
 
 void cpuDump();
