@@ -11,8 +11,6 @@
 struct CPU cpu;
 
 void cpuReset() {
-    printf("cpuReset\n");
-
     cpu.PC = 0;
     for (int i = 0; i < 7; i++) {
         cpu.regs[i] = 0;
@@ -20,8 +18,6 @@ void cpuReset() {
 }
 
 void cpuDump() {
-    printf("cpuDump\n");
-
     printf("PC:%u\n", cpu.PC);
     printf("RA:%u\n", cpu.regs[0]);
     printf("RB:%u\n", cpu.regs[1]);
