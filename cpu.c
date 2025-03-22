@@ -1,5 +1,5 @@
 //
-// Lela Root 3/10/2025 Emulator project
+// Lela Root 3/21/2025 Emulator project
 // C file for the CPU device
 // cpuReset(), cpuDump(), cpuSet(char* reg, int val)
 //
@@ -10,6 +10,9 @@
 
 struct CPU cpu;
 
+/*
+ *Resets the registers to 0
+ */
 void cpuReset() {
     cpu.PC = 0;
     for (int i = 0; i < 7; i++) {
@@ -17,6 +20,9 @@ void cpuReset() {
     }
 }
 
+/*
+ *Prints the contents of all registers
+ */
 void cpuDump() {
     printf("PC:%u\n", cpu.PC);
     printf("RA:%u\n", cpu.regs[0]);
@@ -27,14 +33,17 @@ void cpuDump() {
     printf("RF:%u\n", cpu.regs[5]);
     printf("RG:%u\n", cpu.regs[6]);
     printf("RH:%u\n", cpu.regs[7]);
-  }
+    printf("\n");
+}
 
-void cpuSet(char* reg, int val) {
-    printf("cpuSet reg %s %02X\n", reg, val);
-
-    if (reg[0] == 'P' ) {
+/*
+ *Sets the value of the specified register
+ *Input: String value for register, integer value to set
+ */
+void cpuSet(char *reg, int val) {
+    if (reg[0] == 'P' && reg[1] == 'C') {
         cpu.PC = val;
-    } else {
+    } else if (reg[0] == 'R') {
         switch (reg[1]) {
             case 'A':
                 cpu.regs[0] = val;
@@ -61,8 +70,10 @@ void cpuSet(char* reg, int val) {
                 cpu.regs[7] = val;
                 break;
             default:
-                printf("cpuSet: Unknown register");
+                printf("cpuSet: Unknown register\n");
                 break;
         }
+    } else {
+        printf("cpuSet: Unknown register\n");
     }
 }
